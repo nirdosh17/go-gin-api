@@ -6,6 +6,7 @@
 - Postgres for storage
 - Error tracking in [Sentry](https://sentry.io/)
 - API key header(`x-api-key`) based authorization
+- Containerized | Approx image size: 25 MB
 
 ## APIs
 ### 1. Create a Product
