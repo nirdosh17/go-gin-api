@@ -12,6 +12,7 @@ run:
 		-e SENTRY_DSN=$(SENTRY_DSN) \
 		-e DB_HOST=host.docker.internal \
 		-e DB_PORT=$(DB_PORT) \
+		-e PORT=$(APP_PORT) \
 		-e DB_USER=$(DB_USER) \
 		-e DB_PASSWORD=$(DB_PASSWORD) \
 		-e DB_NAME=$(DB_NAME) \

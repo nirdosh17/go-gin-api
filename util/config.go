@@ -14,6 +14,7 @@ type Config struct {
 	DBUser     string
 	DBPassword string
 	DBName     string
+	AppPort    string
 }
 
 func init() {
@@ -25,5 +26,11 @@ func init() {
 		DBPassword: os.Getenv("DB_PASSWORD"),
 		DBName:     os.Getenv("DB_NAME"),
 	}
+	if os.Getenv("PORT") != "" {
+		AppConfig.AppPort = os.Getenv("PORT")
+	} else {
+		AppConfig.AppPort = "8080"
+	}
+
 	log.Println("Initialized configs")
 }

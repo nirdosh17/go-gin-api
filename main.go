@@ -53,7 +53,7 @@ func main() {
 	})
 	app.Use(middlewares.Auth)
 	app = setupRouter(app)
-	app.Run(":8080")
+	app.Run("0.0.0.0:" + util.AppConfig.AppPort)
 }
 
 func setupRouter(app *gin.Engine) *gin.Engine {

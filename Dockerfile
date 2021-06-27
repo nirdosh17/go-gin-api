@@ -13,10 +13,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o server *.go
 
 FROM alpine:3.14.0 as runner
 
-ARG APP_PORT
-
-EXPOSE $APP_PORT
-
 COPY --from=builder /app/server /server
 
 CMD ["sh","-c", "./server"]
